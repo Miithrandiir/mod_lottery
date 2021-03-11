@@ -17,7 +17,7 @@ std::map<uint32, std::string> LotteryHelper::GetAllPrizeStr() {
 
     std::map<uint32, std::string> allPrize;
 
-    QueryResult result = CharacterDatabase.PQuery("SELECT id, lotteryName FROM lottery");
+    QueryResult result = CharacterDatabase.PQuery("SELECT id, lotteryName FROM lottery WHERE beginDate <= NOW() AND endDate >= NOW()");
 
     if(result)
     {

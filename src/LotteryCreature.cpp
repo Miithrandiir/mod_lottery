@@ -107,10 +107,9 @@ void LotteryCreature::PrizeShow(Player *player, Creature *creature, uint32 actio
     }
 
     for (const auto &item : prizes) {
-
         AddGossipItemFor(player, GOSSIP_ICON_CHAT, item.second, GOSSIP_SENDER_MAIN, action);
-
     }
+    AddGossipItemFor(player, GOSSIP_ICON_CHAT, "<- Menu principal", GOSSIP_SENDER_MAIN, 0);
     SendGossipMenuFor(player, 68, creature);
 }
 
