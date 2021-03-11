@@ -12,7 +12,9 @@ private:
 public:
 
     static std::map<uint32, std::string> GetAllPrizeStr();
-
+    static std::map<uint32, std::string> GetAllPrizeOfLottery(uint32 lotteryId);
+    static void AddTicketToPlayer(uint64 CharacterGUID, uint32 lotteryId);
+    static std::string GetPriceOfTicketStr();
 };
 
 

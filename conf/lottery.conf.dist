@@ -1,0 +1,26 @@
+[worldserver]
+
+#
+# What currency use
+# default: "MONEY"
+# other choice: "ITEM"
+#
+
+Lottery.currency="MONEY"
+
+#
+# Id of the item
+# default: 0
+#
+
+Lottery.currencyId=0;
+
+#
+# How much it cost
+# default: 5000000 (5 Gold coin)
+# if MONEY --> IN COPPER COIN
+# if ITEM --> NUMBER OF ITEM
+#
+
+
+Lottery.currencyAmount=5000000
