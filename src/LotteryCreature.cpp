@@ -90,9 +90,6 @@ void LotteryCreature::ReturnToMainPage(Player *player, Creature *creature) {
     AddGossipItemFor(player, GOSSIP_ICON_CHAT, "Voir les lots", GOSSIP_SENDER_MAIN, 1);
     AddGossipItemFor(player, GOSSIP_ICON_CHAT, "Acheter un ticket ! " + LotteryHelper::GetPriceOfTicketStr(),
                      GOSSIP_SENDER_MAIN, 2);
-    if (player->IsGameMaster()) {
-        AddGossipItemFor(player, GOSSIP_ICON_TABARD, "Administrer la lotterie", GOSSIP_SENDER_MAIN, 3);
-    }
 
     SendGossipMenuFor(player, 68, creature);
 

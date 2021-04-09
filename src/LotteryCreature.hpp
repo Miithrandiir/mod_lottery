@@ -6,6 +6,8 @@
 #define AZEROTHCORE_LOTTERYCREATURE_HPP
 
 
+#include <mutex>
+
 class LotteryCreature : public CreatureScript {
 private:
     enum STATE {
@@ -14,6 +16,7 @@ private:
         SHOW_PRIZES,
     };
     std::map<uint64, STATE> data;
+    std::mutex mutex;
 public:
     LotteryCreature() : CreatureScript("LotteryCreatureScript") {}
 
@@ -26,6 +29,8 @@ public:
     void PrizeShow(Player *, Creature *, uint32);
 
     void buyTicket(Player *, Creature *, uint32);
+
+    void OnUpdate(Creature* /*obj*/, uint32 /*diff*/) override;
 };
 
 

@@ -15,6 +15,10 @@ public:
     static std::map<uint32, std::string> GetAllPrizeOfLottery(uint32 lotteryId);
     static void AddTicketToPlayer(uint64 CharacterGUID, uint32 lotteryId);
     static std::string GetPriceOfTicketStr();
+    static std::map<uint32, std::string> GetLotteryNeedToBeCalculate();
+    static std::map<uint32, uint32> GetAllParticipant(uint32);
+    static void MarkLotteryHasBeenDone(uint32);
+    static void RewardPlayer(Player*,uint32);
 };
 
 
